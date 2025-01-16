@@ -1,0 +1,242 @@
+body {
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+.form-container {
+    width: 650px;
+    padding: 30px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-container h1 {
+    transform: translateX(-220px);
+    font-size: 35px;
+}
+
+.name-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.name-inputs input {
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    color: hsl(186, 15%, 59%);
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+input:not([type="checkbox"]):not([type="radio"]) {
+    border: 1px solid hsl(186, 15%, 59%);
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 8px 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):hover,
+textarea:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus {
+    outline: 1px solid hsl(169, 82%, 27%);
+}
+
+textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    margin: 8px 0;
+    border: 1px solid hsl(186, 15%, 59%);
+    cursor: pointer;
+}
+
+#query {
+    display: flex;
+    gap: 10px;
+    margin: 8px 0;
+    margin-right: -20px;
+    
+}
+
+.query-type {
+    border: 1px solid hsl(186, 15%, 59%);
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.query-type input {
+    cursor: pointer;
+}
+
+.query-type label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.query-type.selected {
+    background-color: hsl(148, 38%, 91%);
+    border-color: hsl(169, 82%, 27%);
+    color: white;
+}
+
+input[type=radio] {
+    accent-color: hsl(169, 82%, 27%);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(169, 82%, 27%);
+    padding: 15px 0;
+    border-radius: 5px;
+    border: 1px solid hsl(187, 24%, 22%);
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(169, 82%, 15%);
+}
+
+.checkbox>div {
+    display: flex;
+    margin-bottom: 8px;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type=checkbox] {
+    accent-color: hsl(169, 82%, 27%);
+    width: 15px;
+}
+
+span.error {
+    font-size: 14px;
+    display: block;
+    color: hsl(0, 66%, 56%);
+}
+
+span.hidden {
+    display: none;
+}
+
+.radio-selected {
+    background-color: hsl(148, 38%, 91%);
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+.star {
+    color: hsl(169, 82%, 27%);
+}
+
+.message {
+    position: fixed;
+    top: 30px;
+    width: 400px;
+    background-color: hsl(187, 24%, 22%);
+    padding: 20px;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    transition: all 1s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+   
+}
+
+.message {
+    position: fixed;
+    top: 30px;
+    width: 400px;
+    background-color: hsl(187, 24%, 22%);
+    padding: 20px;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    transition: all 1s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+    gap: 10px;
+    transform: translateX(150px);
+}
+
+
+.message span {
+    font-weight: bold;
+}
+
+
+.message span::before {
+    content: '✓';
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+    
+}
+
+.message.hidden {
+    transform: translateY(-400px);
+}
+@media screen and (max-width: 400px) {
+    .form-container {
+        width: 300px;
+    }
+
+    .name-inputs {
+        flex-wrap: wrap;
+    }
+
+    #query {
+        flex-wrap: wrap;
+    }
+
+    .message {
+        width: 300px;
+    }
+}
